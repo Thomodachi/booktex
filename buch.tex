@@ -1,0 +1,35 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt,a4paper,oneside]{book}
+
+% Pakete
+\usepackage[ngerman]{babel}
+\usepackage{datetime}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% Datumsformat
+\newdateformat{myformat}{\THEDAY{. }\monthname[\THEMONTH], \THEYEAR}
+
+% Definition: Titel, Autor, Datum
+\title{Familienjahrbuch 2023}
+\author{Josef Reisinger}
+\date{\today}
+
+\begin{document}
+
+% Titel, Autor, Datum drucken
+\maketitle
+\frontmatter
+% Inhaltsverzeichnis
+\tableofcontents
+% Abbildungsverzeichnis
+\listoffigures
+
+% Hauptteil
+\mainmatter
+
+\input{kapitel/kapitel1.tex}
+\input{kapitel/kapitel2.tex}
+\input{kapitel/kapitel3.tex}
+
+\end{document}
